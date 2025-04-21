@@ -1,0 +1,31 @@
+ProductQualityInspection/
+│
+├── dataset/                             ← MVTec AD dataset
+│   ├── train/
+│   │   ├── good/                   ← Non-defective screws
+│   │       ├── img1.png
+│   │       ├── ...
+│   ├── test/
+│   │   ├── good/                   ← Non-defective test images
+│   │   ├── manipulated_front/      ← Defect type: manipulated front
+│   │   ├── scratch_head/           ← Defect type: scratch head
+│   │   ├── scratch_neck/           ← Defect type: scratch neck
+│   │   ├── thread_side/            ← Defect type: thread side
+│   │   ├── thread_top/             ← Defect type: thread top
+│   └── ground_truth/               ← Segmentation masks for defect localization
+│       ├── manipulated_front/
+│       ├── scratch_head/
+│       ├── ...
+│
+├── models/                           ← Trained CNN model gets saved here
+│
+├── utils/                            ← Preprocessing code
+│   ├── preprocessing.py
+│   └── contour_analysis.py
+│
+├── main.py                           ← Main training + testing code
+├── model.py                          ← CNN model architecture
+├── dataset.py                        ← Data loader function
+├── gradcam.py                        ← (Optional) Grad-CAM visualization
+├── requirements.txt                  ← List of packages used
+└── README.md                         ← About the project
